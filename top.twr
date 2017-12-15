@@ -1,0 +1,618 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf snake.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 27985 paths analyzed, 1136 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.666ns.
+--------------------------------------------------------------------------------
+
+Paths for end point snake_graph/snake_body (SLICE_X15Y19.A5), 576 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.334ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/h_count_reg_5 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.618ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.013ns (0.338 - 0.351)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/h_count_reg_5 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y12.BQ      Tcko                  0.447   sync/h_count_reg<7>
+                                                       sync/h_count_reg_5
+    SLICE_X0Y5.C4        net (fanout=90)       2.526   sync/h_count_reg<5>
+    SLICE_X0Y5.COUT      Topcyc                0.295   snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_lut<2>
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+    SLICE_X0Y6.CIN       net (fanout=1)        0.003   snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+    SLICE_X0Y6.AMUX      Tcina                 0.194   snake_text/font_bit
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<4>
+    SLICE_X5Y6.A3        net (fanout=1)        0.898   snake_graph/snake_x[17][6]_GND_7_o_LessThan_296_o
+    SLICE_X5Y6.A         Tilo                  0.259   snake_graph/snake_x<16>_3
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+    SLICE_X7Y9.D3        net (fanout=1)        0.756   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o124
+    SLICE_X7Y9.D         Tilo                  0.259   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o126
+    SLICE_X7Y9.C6        net (fanout=1)        0.118   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+    SLICE_X7Y9.C         Tilo                  0.259   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o127
+    SLICE_X15Y19.A5      net (fanout=1)        1.282   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o126
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.618ns (2.035ns logic, 5.583ns route)
+                                                       (26.7% logic, 73.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.338ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/h_count_reg_5 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.614ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.013ns (0.338 - 0.351)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/h_count_reg_5 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y12.BQ      Tcko                  0.447   sync/h_count_reg<7>
+                                                       sync/h_count_reg_5
+    SLICE_X0Y5.C4        net (fanout=90)       2.526   sync/h_count_reg<5>
+    SLICE_X0Y5.COUT      Topcyc                0.291   snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_lutdi2
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+    SLICE_X0Y6.CIN       net (fanout=1)        0.003   snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+    SLICE_X0Y6.AMUX      Tcina                 0.194   snake_text/font_bit
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<4>
+    SLICE_X5Y6.A3        net (fanout=1)        0.898   snake_graph/snake_x[17][6]_GND_7_o_LessThan_296_o
+    SLICE_X5Y6.A         Tilo                  0.259   snake_graph/snake_x<16>_3
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+    SLICE_X7Y9.D3        net (fanout=1)        0.756   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o124
+    SLICE_X7Y9.D         Tilo                  0.259   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o126
+    SLICE_X7Y9.C6        net (fanout=1)        0.118   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+    SLICE_X7Y9.C         Tilo                  0.259   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o127
+    SLICE_X15Y19.A5      net (fanout=1)        1.282   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o126
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.614ns (2.031ns logic, 5.583ns route)
+                                                       (26.7% logic, 73.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.398ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/h_count_reg_7 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.554ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.013ns (0.338 - 0.351)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/h_count_reg_7 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y12.DQ      Tcko                  0.447   sync/h_count_reg<7>
+                                                       sync/h_count_reg_7
+    SLICE_X0Y5.D2        net (fanout=79)       2.476   sync/h_count_reg<7>
+    SLICE_X0Y5.COUT      Topcyd                0.281   snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_lutdi3
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+    SLICE_X0Y6.CIN       net (fanout=1)        0.003   snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<3>
+    SLICE_X0Y6.AMUX      Tcina                 0.194   snake_text/font_bit
+                                                       snake_graph/Mcompar_snake_x[17][6]_GND_7_o_LessThan_296_o_cy<4>
+    SLICE_X5Y6.A3        net (fanout=1)        0.898   snake_graph/snake_x[17][6]_GND_7_o_LessThan_296_o
+    SLICE_X5Y6.A         Tilo                  0.259   snake_graph/snake_x<16>_3
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+    SLICE_X7Y9.D3        net (fanout=1)        0.756   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o124
+    SLICE_X7Y9.D         Tilo                  0.259   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o126
+    SLICE_X7Y9.C6        net (fanout=1)        0.118   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+    SLICE_X7Y9.C         Tilo                  0.259   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o125
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o127
+    SLICE_X15Y19.A5      net (fanout=1)        1.282   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o126
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.554ns (2.021ns logic, 5.533ns route)
+                                                       (26.8% logic, 73.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point snake_graph/snake_body (SLICE_X15Y19.A1), 576 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.443ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/h_count_reg_4 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.509ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.013ns (0.338 - 0.351)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/h_count_reg_4 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y12.AQ      Tcko                  0.447   sync/h_count_reg<7>
+                                                       sync/h_count_reg_4
+    SLICE_X26Y7.B2       net (fanout=84)       1.257   sync/h_count_reg<4>
+    SLICE_X26Y7.COUT     Topcyb                0.380   snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_lut<1>
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+    SLICE_X26Y8.CIN      net (fanout=1)        0.082   snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+    SLICE_X26Y8.AMUX     Tcina                 0.212   snake_graph/snake_x[11][6]_GND_7_o_LessThan_230_o
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<4>
+    SLICE_X17Y3.A4       net (fanout=1)        1.396   snake_graph/snake_x[11][6]_GND_7_o_LessThan_230_o
+    SLICE_X17Y3.A        Tilo                  0.259   snake_graph/n3168<4>
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o111
+    SLICE_X19Y5.C1       net (fanout=1)        1.053   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o110
+    SLICE_X19Y5.C        Tilo                  0.259   snake_graph/snake_x<11>_3
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o118
+    SLICE_X15Y19.A1      net (fanout=1)        1.842   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o117
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.509ns (1.879ns logic, 5.630ns route)
+                                                       (25.0% logic, 75.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.511ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/h_count_reg_4 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.441ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.013ns (0.338 - 0.351)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/h_count_reg_4 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y12.AQ      Tcko                  0.447   sync/h_count_reg<7>
+                                                       sync/h_count_reg_4
+    SLICE_X26Y7.B2       net (fanout=84)       1.257   sync/h_count_reg<4>
+    SLICE_X26Y7.COUT     Topcyb                0.312   snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_lutdi1
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+    SLICE_X26Y8.CIN      net (fanout=1)        0.082   snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+    SLICE_X26Y8.AMUX     Tcina                 0.212   snake_graph/snake_x[11][6]_GND_7_o_LessThan_230_o
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<4>
+    SLICE_X17Y3.A4       net (fanout=1)        1.396   snake_graph/snake_x[11][6]_GND_7_o_LessThan_230_o
+    SLICE_X17Y3.A        Tilo                  0.259   snake_graph/n3168<4>
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o111
+    SLICE_X19Y5.C1       net (fanout=1)        1.053   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o110
+    SLICE_X19Y5.C        Tilo                  0.259   snake_graph/snake_x<11>_3
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o118
+    SLICE_X15Y19.A1      net (fanout=1)        1.842   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o117
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.441ns (1.811ns logic, 5.630ns route)
+                                                       (24.3% logic, 75.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/h_count_reg_3 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.434ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.011ns (0.338 - 0.349)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/h_count_reg_3 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y11.DQ      Tcko                  0.447   sync/h_count_reg<3>
+                                                       sync/h_count_reg_3
+    SLICE_X26Y7.B3       net (fanout=83)       1.182   sync/h_count_reg<3>
+    SLICE_X26Y7.COUT     Topcyb                0.380   snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_lut<1>
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+    SLICE_X26Y8.CIN      net (fanout=1)        0.082   snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<3>
+    SLICE_X26Y8.AMUX     Tcina                 0.212   snake_graph/snake_x[11][6]_GND_7_o_LessThan_230_o
+                                                       snake_graph/Mcompar_snake_x[11][6]_GND_7_o_LessThan_230_o_cy<4>
+    SLICE_X17Y3.A4       net (fanout=1)        1.396   snake_graph/snake_x[11][6]_GND_7_o_LessThan_230_o
+    SLICE_X17Y3.A        Tilo                  0.259   snake_graph/n3168<4>
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o111
+    SLICE_X19Y5.C1       net (fanout=1)        1.053   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o110
+    SLICE_X19Y5.C        Tilo                  0.259   snake_graph/snake_x<11>_3
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o118
+    SLICE_X15Y19.A1      net (fanout=1)        1.842   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o117
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.434ns (1.879ns logic, 5.555ns route)
+                                                       (25.3% logic, 74.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point snake_graph/snake_body (SLICE_X15Y19.A3), 576 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.699ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/v_count_reg_6 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.260ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.006ns (0.338 - 0.344)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/v_count_reg_6 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.CQ       Tcko                  0.447   sync/v_count_reg<7>
+                                                       sync/v_count_reg_6
+    SLICE_X30Y15.C2      net (fanout=74)       1.683   sync/v_count_reg<6>
+    SLICE_X30Y15.COUT    Topcyc                0.280   snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_lutdi2
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+    SLICE_X30Y16.CIN     net (fanout=1)        0.003   snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+    SLICE_X30Y16.AMUX    Tcina                 0.212   snake_graph/n3072<4>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<4>
+    SLICE_X27Y15.B3      net (fanout=1)        0.788   snake_graph/snake_y[30][6]_GND_7_o_LessThan_444_o
+    SLICE_X27Y15.B       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o15
+    SLICE_X27Y15.A5      net (fanout=1)        0.187   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o14
+    SLICE_X27Y15.A       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o16
+    SLICE_X27Y15.C1      net (fanout=1)        1.236   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o15
+    SLICE_X27Y15.C       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o19
+    SLICE_X15Y19.A3      net (fanout=1)        1.325   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o18
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.260ns (2.038ns logic, 5.222ns route)
+                                                       (28.1% logic, 71.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.702ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/v_count_reg_6 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.257ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.006ns (0.338 - 0.344)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/v_count_reg_6 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y9.CQ       Tcko                  0.447   sync/v_count_reg<7>
+                                                       sync/v_count_reg_6
+    SLICE_X30Y15.C2      net (fanout=74)       1.683   sync/v_count_reg<6>
+    SLICE_X30Y15.COUT    Topcyc                0.277   snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_lut<2>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+    SLICE_X30Y16.CIN     net (fanout=1)        0.003   snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+    SLICE_X30Y16.AMUX    Tcina                 0.212   snake_graph/n3072<4>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<4>
+    SLICE_X27Y15.B3      net (fanout=1)        0.788   snake_graph/snake_y[30][6]_GND_7_o_LessThan_444_o
+    SLICE_X27Y15.B       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o15
+    SLICE_X27Y15.A5      net (fanout=1)        0.187   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o14
+    SLICE_X27Y15.A       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o16
+    SLICE_X27Y15.C1      net (fanout=1)        1.236   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o15
+    SLICE_X27Y15.C       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o19
+    SLICE_X15Y19.A3      net (fanout=1)        1.325   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o18
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.257ns (2.035ns logic, 5.222ns route)
+                                                       (28.0% logic, 72.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.767ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               sync/v_count_reg_2 (FF)
+  Destination:          snake_graph/snake_body (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.194ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.004ns (0.338 - 0.342)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: sync/v_count_reg_2 to snake_graph/snake_body
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y8.CQ       Tcko                  0.447   sync/v_count_reg<3>
+                                                       sync/v_count_reg_2
+    SLICE_X30Y15.A1      net (fanout=74)       1.511   sync/v_count_reg<2>
+    SLICE_X30Y15.COUT    Topcya                0.386   snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_lutdi
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+    SLICE_X30Y16.CIN     net (fanout=1)        0.003   snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<3>
+    SLICE_X30Y16.AMUX    Tcina                 0.212   snake_graph/n3072<4>
+                                                       snake_graph/Mcompar_snake_y[30][6]_GND_7_o_LessThan_444_o_cy<4>
+    SLICE_X27Y15.B3      net (fanout=1)        0.788   snake_graph/snake_y[30][6]_GND_7_o_LessThan_444_o
+    SLICE_X27Y15.B       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o15
+    SLICE_X27Y15.A5      net (fanout=1)        0.187   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o14
+    SLICE_X27Y15.A       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o16
+    SLICE_X27Y15.C1      net (fanout=1)        1.236   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o15
+    SLICE_X27Y15.C       Tilo                  0.259   snake_graph/snake_y<31>_6
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o19
+    SLICE_X15Y19.A3      net (fanout=1)        1.325   snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o18
+    SLICE_X15Y19.CLK     Tas                   0.322   snake_graph/snake_body
+                                                       snake_graph/Mmux_GND_7_o_snake_x[31][6]_MUX_814_o136
+                                                       snake_graph/snake_body
+    -------------------------------------------------  ---------------------------
+    Total                                      7.194ns (2.144ns logic, 5.050ns route)
+                                                       (29.8% logic, 70.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point new_direction/jitter2/cnt_31 (SLICE_X24Y23.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.459ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               new_direction/jitter2/cnt_31 (FF)
+  Destination:          new_direction/jitter2/cnt_31 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.459ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: new_direction/jitter2/cnt_31 to new_direction/jitter2/cnt_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X24Y23.DQ      Tcko                  0.200   new_direction/jitter2/cnt<31>
+                                                       new_direction/jitter2/cnt_31
+    SLICE_X24Y23.D6      net (fanout=2)        0.022   new_direction/jitter2/cnt<31>
+    SLICE_X24Y23.CLK     Tah         (-Th)    -0.237   new_direction/jitter2/cnt<31>
+                                                       new_direction/jitter2/Mcount_cnt_lut<31>
+                                                       new_direction/jitter2/Mcount_cnt_xor<31>
+                                                       new_direction/jitter2/cnt_31
+    -------------------------------------------------  ---------------------------
+    Total                                      0.459ns (0.437ns logic, 0.022ns route)
+                                                       (95.2% logic, 4.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point new_direction/jitter0/cnt_31 (SLICE_X36Y35.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.462ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               new_direction/jitter0/cnt_31 (FF)
+  Destination:          new_direction/jitter0/cnt_31 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.462ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: new_direction/jitter0/cnt_31 to new_direction/jitter0/cnt_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y35.DQ      Tcko                  0.200   new_direction/jitter0/cnt<31>
+                                                       new_direction/jitter0/cnt_31
+    SLICE_X36Y35.D6      net (fanout=2)        0.025   new_direction/jitter0/cnt<31>
+    SLICE_X36Y35.CLK     Tah         (-Th)    -0.237   new_direction/jitter0/cnt<31>
+                                                       new_direction/jitter0/Mcount_cnt_lut<31>
+                                                       new_direction/jitter0/Mcount_cnt_xor<31>
+                                                       new_direction/jitter0/cnt_31
+    -------------------------------------------------  ---------------------------
+    Total                                      0.462ns (0.437ns logic, 0.025ns route)
+                                                       (94.6% logic, 5.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point new_direction/jitter1/cnt_31 (SLICE_X12Y36.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.463ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               new_direction/jitter1/cnt_31 (FF)
+  Destination:          new_direction/jitter1/cnt_31 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.463ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: new_direction/jitter1/cnt_31 to new_direction/jitter1/cnt_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y36.DQ      Tcko                  0.200   new_direction/jitter1/cnt<31>
+                                                       new_direction/jitter1/cnt_31
+    SLICE_X12Y36.D6      net (fanout=2)        0.026   new_direction/jitter1/cnt<31>
+    SLICE_X12Y36.CLK     Tah         (-Th)    -0.237   new_direction/jitter1/cnt<31>
+                                                       new_direction/jitter1/Mcount_cnt_lut<31>
+                                                       new_direction/jitter1/Mcount_cnt_xor<31>
+                                                       new_direction/jitter1/cnt_31
+    -------------------------------------------------  ---------------------------
+    Total                                      0.463ns (0.437ns logic, 0.026ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: snake_text/font_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: snake_text/font_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X0Y4.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.270ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 9.570ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: new_direction/jitter0/cnt<3>/CLK
+  Logical resource: new_direction/jitter0/cnt_0/CK
+  Location pin: SLICE_X36Y28.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.666|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 27985 paths, 0 nets, and 2315 connections
+
+Design statistics:
+   Minimum period:   7.666ns{1}   (Maximum frequency: 130.446MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Dec 07 16:02:36 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 353 MB
+
+
+

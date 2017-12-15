@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\FPGA\fpga_snake\top.ncd
+OUTFILE=C:\FPGA\fpga_snake\top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\FPGA\fpga_snake
+LICENSE=WebPack
+USER_INFO=__0_0_0

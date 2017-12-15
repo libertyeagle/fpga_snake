@@ -1,0 +1,154 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 07 16:01:48 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sw" LOCATE = SITE "T10" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "reset_high" LOCATE = SITE "A8" LEVEL 1;
+COMP "led_red" LOCATE = SITE "F10" LEVEL 1;
+COMP "led_green" LOCATE = SITE "F11" LEVEL 1;
+COMP "hsync" LOCATE = SITE "N6" LEVEL 1;
+COMP "reset" LOCATE = SITE "B8" LEVEL 1;
+COMP "vsync" LOCATE = SITE "P7" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "N10" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "V12" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "T12" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "R7" LEVEL 1;
+COMP "rgb<1>" LOCATE = SITE "T7" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "P8" LEVEL 1;
+COMP "rgb<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "rgb<4>" LOCATE = SITE "V6" LEVEL 1;
+COMP "rgb<5>" LOCATE = SITE "U7" LEVEL 1;
+COMP "rgb<6>" LOCATE = SITE "V7" LEVEL 1;
+COMP "rgb<7>" LOCATE = SITE "N7" LEVEL 1;
+COMP "led_blue" LOCATE = SITE "E11" LEVEL 1;
+PIN
+        snake_text/font_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "snake_text/font_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+TIMEGRP sys_clk_pin = BEL "new_direction/direction_3" BEL
+        "new_direction/direction_2" BEL "new_direction/direction_1" BEL
+        "new_direction/direction_0" BEL "new_direction/jitter0/cnt_31" BEL
+        "new_direction/jitter0/cnt_30" BEL "new_direction/jitter0/cnt_29" BEL
+        "new_direction/jitter0/cnt_28" BEL "new_direction/jitter0/cnt_27" BEL
+        "new_direction/jitter0/cnt_26" BEL "new_direction/jitter0/cnt_25" BEL
+        "new_direction/jitter0/cnt_24" BEL "new_direction/jitter0/cnt_23" BEL
+        "new_direction/jitter0/cnt_22" BEL "new_direction/jitter0/cnt_21" BEL
+        "new_direction/jitter0/cnt_20" BEL "new_direction/jitter0/cnt_19" BEL
+        "new_direction/jitter0/cnt_18" BEL "new_direction/jitter0/cnt_17" BEL
+        "new_direction/jitter0/cnt_16" BEL "new_direction/jitter0/cnt_15" BEL
+        "new_direction/jitter0/cnt_14" BEL "new_direction/jitter0/cnt_13" BEL
+        "new_direction/jitter0/cnt_12" BEL "new_direction/jitter0/cnt_11" BEL
+        "new_direction/jitter0/cnt_10" BEL "new_direction/jitter0/cnt_9" BEL
+        "new_direction/jitter0/cnt_8" BEL "new_direction/jitter0/cnt_7" BEL
+        "new_direction/jitter0/cnt_6" BEL "new_direction/jitter0/cnt_5" BEL
+        "new_direction/jitter0/cnt_4" BEL "new_direction/jitter0/cnt_3" BEL
+        "new_direction/jitter0/cnt_2" BEL "new_direction/jitter0/cnt_1" BEL
+        "new_direction/jitter0/cnt_0" BEL "new_direction/jitter0/cnt_en" BEL
+        "new_direction/jitter0/button_final" BEL
+        "new_direction/jitter0/button_out" BEL "new_direction/jitter1/cnt_31"
+        BEL "new_direction/jitter1/cnt_30" BEL "new_direction/jitter1/cnt_29"
+        BEL "new_direction/jitter1/cnt_28" BEL "new_direction/jitter1/cnt_27"
+        BEL "new_direction/jitter1/cnt_26" BEL "new_direction/jitter1/cnt_25"
+        BEL "new_direction/jitter1/cnt_24" BEL "new_direction/jitter1/cnt_23"
+        BEL "new_direction/jitter1/cnt_22" BEL "new_direction/jitter1/cnt_21"
+        BEL "new_direction/jitter1/cnt_20" BEL "new_direction/jitter1/cnt_19"
+        BEL "new_direction/jitter1/cnt_18" BEL "new_direction/jitter1/cnt_17"
+        BEL "new_direction/jitter1/cnt_16" BEL "new_direction/jitter1/cnt_15"
+        BEL "new_direction/jitter1/cnt_14" BEL "new_direction/jitter1/cnt_13"
+        BEL "new_direction/jitter1/cnt_12" BEL "new_direction/jitter1/cnt_11"
+        BEL "new_direction/jitter1/cnt_10" BEL "new_direction/jitter1/cnt_9"
+        BEL "new_direction/jitter1/cnt_8" BEL "new_direction/jitter1/cnt_7"
+        BEL "new_direction/jitter1/cnt_6" BEL "new_direction/jitter1/cnt_5"
+        BEL "new_direction/jitter1/cnt_4" BEL "new_direction/jitter1/cnt_3"
+        BEL "new_direction/jitter1/cnt_2" BEL "new_direction/jitter1/cnt_1"
+        BEL "new_direction/jitter1/cnt_0" BEL "new_direction/jitter1/cnt_en"
+        BEL "new_direction/jitter1/button_final" BEL
+        "new_direction/jitter1/button_out" BEL "new_direction/jitter2/cnt_31"
+        BEL "new_direction/jitter2/cnt_30" BEL "new_direction/jitter2/cnt_29"
+        BEL "new_direction/jitter2/cnt_28" BEL "new_direction/jitter2/cnt_27"
+        BEL "new_direction/jitter2/cnt_26" BEL "new_direction/jitter2/cnt_25"
+        BEL "new_direction/jitter2/cnt_24" BEL "new_direction/jitter2/cnt_23"
+        BEL "new_direction/jitter2/cnt_22" BEL "new_direction/jitter2/cnt_21"
+        BEL "new_direction/jitter2/cnt_20" BEL "new_direction/jitter2/cnt_19"
+        BEL "new_direction/jitter2/cnt_18" BEL "new_direction/jitter2/cnt_17"
+        BEL "new_direction/jitter2/cnt_16" BEL "new_direction/jitter2/cnt_15"
+        BEL "new_direction/jitter2/cnt_14" BEL "new_direction/jitter2/cnt_13"
+        BEL "new_direction/jitter2/cnt_12" BEL "new_direction/jitter2/cnt_11"
+        BEL "new_direction/jitter2/cnt_10" BEL "new_direction/jitter2/cnt_9"
+        BEL "new_direction/jitter2/cnt_8" BEL "new_direction/jitter2/cnt_7"
+        BEL "new_direction/jitter2/cnt_6" BEL "new_direction/jitter2/cnt_5"
+        BEL "new_direction/jitter2/cnt_4" BEL "new_direction/jitter2/cnt_3"
+        BEL "new_direction/jitter2/cnt_2" BEL "new_direction/jitter2/cnt_1"
+        BEL "new_direction/jitter2/cnt_0" BEL "new_direction/jitter2/cnt_en"
+        BEL "new_direction/jitter2/button_final" BEL
+        "new_direction/jitter2/button_out" BEL "new_direction/jitter3/cnt_31"
+        BEL "new_direction/jitter3/cnt_30" BEL "new_direction/jitter3/cnt_29"
+        BEL "new_direction/jitter3/cnt_28" BEL "new_direction/jitter3/cnt_27"
+        BEL "new_direction/jitter3/cnt_26" BEL "new_direction/jitter3/cnt_25"
+        BEL "new_direction/jitter3/cnt_24" BEL "new_direction/jitter3/cnt_23"
+        BEL "new_direction/jitter3/cnt_22" BEL "new_direction/jitter3/cnt_21"
+        BEL "new_direction/jitter3/cnt_20" BEL "new_direction/jitter3/cnt_19"
+        BEL "new_direction/jitter3/cnt_18" BEL "new_direction/jitter3/cnt_17"
+        BEL "new_direction/jitter3/cnt_16" BEL "new_direction/jitter3/cnt_15"
+        BEL "new_direction/jitter3/cnt_14" BEL "new_direction/jitter3/cnt_13"
+        BEL "new_direction/jitter3/cnt_12" BEL "new_direction/jitter3/cnt_11"
+        BEL "new_direction/jitter3/cnt_10" BEL "new_direction/jitter3/cnt_9"
+        BEL "new_direction/jitter3/cnt_8" BEL "new_direction/jitter3/cnt_7"
+        BEL "new_direction/jitter3/cnt_6" BEL "new_direction/jitter3/cnt_5"
+        BEL "new_direction/jitter3/cnt_4" BEL "new_direction/jitter3/cnt_3"
+        BEL "new_direction/jitter3/cnt_2" BEL "new_direction/jitter3/cnt_1"
+        BEL "new_direction/jitter3/cnt_0" BEL "new_direction/jitter3/cnt_en"
+        BEL "new_direction/jitter3/button_final" BEL
+        "new_direction/jitter3/button_out" BEL "sync/h_count_reg_9" BEL
+        "sync/h_count_reg_8" BEL "sync/h_count_reg_7" BEL "sync/h_count_reg_6"
+        BEL "sync/h_count_reg_5" BEL "sync/h_count_reg_4" BEL
+        "sync/h_count_reg_3" BEL "sync/h_count_reg_2" BEL "sync/h_count_reg_1"
+        BEL "sync/h_count_reg_0" BEL "sync/v_count_reg_9" BEL
+        "sync/v_count_reg_8" BEL "sync/v_count_reg_7" BEL "sync/v_count_reg_6"
+        BEL "sync/v_count_reg_5" BEL "sync/v_count_reg_4" BEL
+        "sync/v_count_reg_3" BEL "sync/v_count_reg_2" BEL "sync/v_count_reg_1"
+        BEL "sync/v_count_reg_0" BEL "sync/mod4_reg_1" BEL "sync/mod4_reg_0"
+        BEL "sync/v_sync_reg" BEL "sync/h_sync_reg" BEL
+        "snake_graph/new_clk/cnt_div_31" BEL "snake_graph/new_clk/cnt_div_30"
+        BEL "snake_graph/new_clk/cnt_div_29" BEL
+        "snake_graph/new_clk/cnt_div_28" BEL "snake_graph/new_clk/cnt_div_27"
+        BEL "snake_graph/new_clk/cnt_div_26" BEL
+        "snake_graph/new_clk/cnt_div_25" BEL "snake_graph/new_clk/cnt_div_24"
+        BEL "snake_graph/new_clk/cnt_div_23" BEL
+        "snake_graph/new_clk/cnt_div_22" BEL "snake_graph/new_clk/cnt_div_21"
+        BEL "snake_graph/new_clk/cnt_div_20" BEL
+        "snake_graph/new_clk/cnt_div_19" BEL "snake_graph/new_clk/cnt_div_18"
+        BEL "snake_graph/new_clk/cnt_div_17" BEL
+        "snake_graph/new_clk/cnt_div_16" BEL "snake_graph/new_clk/cnt_div_15"
+        BEL "snake_graph/new_clk/cnt_div_14" BEL
+        "snake_graph/new_clk/cnt_div_13" BEL "snake_graph/new_clk/cnt_div_12"
+        BEL "snake_graph/new_clk/cnt_div_11" BEL
+        "snake_graph/new_clk/cnt_div_10" BEL "snake_graph/new_clk/cnt_div_9"
+        BEL "snake_graph/new_clk/cnt_div_8" BEL
+        "snake_graph/new_clk/cnt_div_7" BEL "snake_graph/new_clk/clk_slow" BEL
+        "snake_graph/snake_body" BEL "snake_graph/high_30" BEL
+        "snake_graph/high_29" BEL "snake_graph/high_28" BEL
+        "snake_graph/high_27" BEL "snake_graph/high_26" BEL
+        "snake_graph/high_25" BEL "snake_graph/high_24" BEL
+        "snake_graph/high_23" BEL "snake_graph/high_22" BEL
+        "snake_graph/high_21" BEL "snake_graph/high_20" BEL
+        "snake_graph/high_19" BEL "snake_graph/high_18" BEL
+        "snake_graph/high_17" BEL "snake_graph/high_16" BEL
+        "snake_graph/high_15" BEL "snake_graph/high_14" BEL
+        "snake_graph/high_13" BEL "snake_graph/high_12" BEL
+        "snake_graph/high_11" BEL "snake_graph/high_10" BEL
+        "snake_graph/high_9" BEL "snake_graph/high_8" BEL "snake_graph/high_7"
+        BEL "snake_graph/high_6" BEL "snake_graph/high_5" BEL
+        "snake_graph/high_4" BEL "snake_graph/high_3" BEL "snake_graph/high_2"
+        BEL "snake_graph/high_1" BEL "snake_graph/high_0" BEL
+        "snake_graph/game_over" BEL "snake_graph/death" BEL
+        "snake_graph/snake_on" BEL "snake_graph/snake_head" BEL
+        "clk_BUFGP/BUFG" PIN
+        "snake_text/font_unit/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+
