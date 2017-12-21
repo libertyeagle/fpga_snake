@@ -42,12 +42,10 @@ assign border_on = (hard) ?
 ## 运行效果
 ### 截图
 ![Easy](demo/easy.JPG)
-<div align="center">简单模式</div>
 ![Hard](demo/hard.JPG)
-<div align="center">困难模式</div>
 ![Game Over](demo/game_over.JPG)
-<div align="center">游戏结束</div>
 ### 视频
+[Demo Video](https://github.com/libertyeagle/fpga_snake/blob/master/demo/demo.m4v "Demo")
 ## 可改进部分
 - 增加关卡难度
 - 增加读档存档功能
